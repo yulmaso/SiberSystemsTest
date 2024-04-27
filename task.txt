@@ -1,0 +1,36 @@
+Siber Systems 2nd test task for
+
+You applied for a job in Siber Systems.
+Please demonstrate your programming skills 
+by writing program as described below.
+
+
+Task
+----
+Given:
+There are several rectangles with coordinates of top left and bottom 
+right corners. These rectangles do not intersect each other.
+
+To do:
+You should write a program that generates code of HTML table. Table 
+cells must be colored so that visually represent relative size and 
+mutual arrangement of the rectangles in the best way when this table is 
+loaded in Google Chrome browser.
+
+The table should be as compact as possible.
+It is prohibited to use absolute positioning for HTML elements.
+
+Requirements:
+- A Kotlin application should be written.
+- It should use only standard I/O libraries.
+- Input data should be in a file which name is passed to the 
+application as a command line parameter.
+
+
+Send your solution to email:
+xvega@siber.com
+copy to beloruss@siber.com
+
+
+Best regards,
+Siber Systems.
