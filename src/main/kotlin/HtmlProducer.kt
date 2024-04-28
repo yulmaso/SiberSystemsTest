@@ -1,5 +1,8 @@
 package org.example
 
+import java.util.Collections.max
+import java.util.Collections.min
+
 class HtmlProducer {
     private val colors by lazy {
         listOf("#FF0000", "#FFFF00", "#00FF00", "#00FFFF", "#0000FF", "#FF00FF", "#800080", "#808000", "#800000")
@@ -49,10 +52,10 @@ class HtmlProducer {
         var minY = Int.MAX_VALUE
 
         rectangles.forEach { rect ->
-            if (maxX < rect.x2) maxX = rect.x2
-            if (maxY < rect.y2) maxY = rect.y2
-            if (minX > rect.x1) minX = rect.x1
-            if (minY > rect.y1) minY = rect.y1
+            maxX = max(listOf(maxX, rect.x1, rect.x2))
+            minX = min(listOf(minX, rect.x1, rect.x2))
+            maxY = max(listOf(maxY, rect.y1, rect.y2))
+            minY = min(listOf(minY, rect.y1, rect.y2))
         }
 
         val rowsSize = maxY - minY + 1
