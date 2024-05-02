@@ -4,6 +4,7 @@ private const val resultFileName = "result.html"
 
 private val fileRepository by lazy { FileRepository() }
 private val rectangleParser by lazy { RectangleParser() }
+private val tableProducer by lazy { TableProducer() }
 private val htmlProducer by lazy { HtmlProducer() }
 
 fun main() {
@@ -12,7 +13,8 @@ fun main() {
         val path = readln()
         val input = fileRepository.readTextFromFile(path)
         val rectangles = rectangleParser.parse(input)
-        val htmlString = htmlProducer.buildRectanglesTableHtml(rectangles)
+        val table = tableProducer.buildTable(rectangles)
+        val htmlString = htmlProducer.buildRectanglesTableHtml(table, rectangles.count())
         fileRepository.saveTextToFile(htmlString, resultFileName)
         println("Success! The file created: $resultFileName")
     } catch (e: Exception) {

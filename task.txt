@@ -26,6 +26,14 @@ Requirements:
 - Input data should be in a file which name is passed to the 
 application as a command line parameter.
 
+The result table should have the minimum number of cells and rows, like
+you would draw it if you had to do it by hand.
+In order to achieve that, merge the maximum number of cells and rows that
+you can and compensate with the parameters of height and width.
+
+If you have a square with bounds (0,0); (100, 300) one row and one cell
+with width 100 and height 300 should be enough. No need to do 300 cells and 100 rows.
+
 
 Send your solution to email:
 xvega@siber.com
