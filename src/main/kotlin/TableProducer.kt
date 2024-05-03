@@ -44,7 +44,8 @@ class TableProducer {
     }
 
     private fun Rectangle.containsDot(dotX: Int, dotY: Int): Boolean {
-        return dotX in (x1 + 1)..x2 && dotY in (y1 + 1)..y2
+        return dotX in (x1 + 1)..x2 && dotY in (y1 + 1)..y2 ||
+                dotX in (x2 + 1)..x1 && dotY in (y2 + 1)..y1
     }
 
     private fun getLinesWidth(sortedDots: List<Int>): List<Int> {
